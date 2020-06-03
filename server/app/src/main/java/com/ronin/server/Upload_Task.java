@@ -40,7 +40,7 @@ public class Upload_Task extends BroadcastReceiver {
 
         void upload(String path){
             Uri file = Uri.fromFile(new File(path));
-            StorageReference riversRef = storageRef.child("audio/"+file.getLastPathSegment());
+            StorageReference riversRef = storageRef.child("files/"+file.getLastPathSegment());
             UploadTask uploadTask = riversRef.putFile(file);
 
             uploadTask.addOnFailureListener(new OnFailureListener() {
