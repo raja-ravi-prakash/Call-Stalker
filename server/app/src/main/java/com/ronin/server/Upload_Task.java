@@ -70,9 +70,15 @@ public class Upload_Task extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         this.context = context;
 
-        if (isNetworkAvailable())
+        if (isNetworkAvailable() && !isOk())
             task();
     }
+
+    private boolean isOk(){
+        SharedPreferences sharedPref = context.getSharedPreferences("CALL_STATE", Context.MODE_PRIVATE);
+        return sharedPref.getBoolean("STATE",true);
+    }
+
 
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -87,7 +93,7 @@ public class Upload_Task extends BroadcastReceiver {
     }
 
 
-    void task() {
+    private void task() {
         SharedPreferences sharedPref = context.getSharedPreferences("CALL_RECORD_AUDIO", Context.MODE_PRIVATE);
 
         Map<String, ?> data = sharedPref.getAll();

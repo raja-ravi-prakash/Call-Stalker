@@ -104,6 +104,7 @@ public class MyReceiver extends BroadcastReceiver {
             mr.stop();
             mr.reset();
             mr.release();
+            geditor.putBoolean("STATE",false).apply();
         }
         System.out.println("Invalid Call to STOP !!!!");
     }
