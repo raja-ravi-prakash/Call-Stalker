@@ -34,9 +34,8 @@ A Call Stalker which runs a Service to save all call recordings to Firebase Stor
   
   - You can check your firebase storage console for audio files , which will be periodically uploaded by the application .
   
-  - ### Retrieve Localy 
+  - ### Retrieve Localy 💣💣💣💣
     --------------
-  
     - You can retireve it locally by the given tool .
     
       - Run the below commands to download files .
