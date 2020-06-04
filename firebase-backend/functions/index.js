@@ -29,12 +29,11 @@ function mUrl(object) {
 exports.triggerFile = functions.storage.object().onFinalize((object) => {
   var url = mUrl(object);
 
-  db.collection("links")
-    .add({ url: url })
-    .then((value) => {
-      return value.id;
-    })
-    .catch((err) => {
-      console.log(err);
+  return db
+    .collection("links")
+    .doc(new Date().toString())
+    .set({ url: url })
+    .then((ref) => {
+      return ref.isEqual;
     });
 });
