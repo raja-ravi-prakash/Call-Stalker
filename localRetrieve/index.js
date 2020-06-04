@@ -31,7 +31,9 @@ function createFile(file) {
 }
 
 function set() {
-  fs.mkdirSync("files");
+  if (!fs.existsSync("files")) {
+    fs.mkdirSync("files");
+  }
   filesObject.forEach((val) => {
     createFile(val);
   });
