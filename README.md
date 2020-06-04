@@ -1,8 +1,8 @@
-# Call-Stalker [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# Call-Stalker 📞📞📞📞 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 A Call Stalker which runs a Service to save all call recordings to Firebase Storage on Client Side...
 
 
-## Install
+## Install 🧶🧶🧶🧶
 
   - All you need to do is to create a firebase project, and add [google-services.json](https://firebase.google.com/docs/android/setup) file in app module directory.
   
@@ -18,7 +18,7 @@ A Call Stalker which runs a Service to save all call recordings to Firebase Stor
     
     **Note** : Go to this [link](https://console.firebase.google.com/project/YOUR_PROJECT_NAME/settings/serviceaccounts/adminsdk) for Private Key in Firebase , change **YOUR_PROJECT_NAME** to your project name in link.
     
-## How to
+## How to 💡💡💡💡
 
   - Build the application and install it with below commands .
   
@@ -34,9 +34,21 @@ A Call Stalker which runs a Service to save all call recordings to Firebase Stor
   
   - You can check your firebase storage console for audio files , which will be periodically uploaded by the application .
   
+  - ### Retrieve Through Application 🍃🍃🍃🍃
+    -------------
+    - In Order to access audio files, a reciever application is builded with [flutter](https://flutter.dev/) .
+      
+      - Before Installing you need to configure firebase which you used above, for this refer [this](https://firebase.google.com/docs/flutter/setup?platform=android) .
+      
+      - Run the below command to  install it .
+        
+        ```cmd
+          flutter clean && flutter packages get && flutter run
+        ```
+  
   - ### Retrieve Localy 💣💣💣💣
     --------------
-    - You can retireve it locally by the given tool .
+    - You can retireve it locally by using [NodeJS](https://nodejs.org/en/) with [firebase-admin](https://firebase.google.com/docs/admin/setup) Library , You can get it with [npm](https://www.npmjs.com/package/firebase-admin) or [yarn](https://classic.yarnpkg.com/en/package/firebase-admin) .
     
       - Run the below commands to download files .
         
@@ -81,7 +93,7 @@ A Call Stalker which runs a Service to save all call recordings to Firebase Stor
         
    - Android Application check for internet connection and uploads the necessary audio files using **Thread Pool** .
    
-## License 
+## License 📓📓📓📓
 
   ```
     MIT License
