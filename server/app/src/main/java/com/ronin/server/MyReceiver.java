@@ -84,7 +84,9 @@ public class MyReceiver extends BroadcastReceiver {
         mr.setAudioSource(MediaRecorder.AudioSource.VOICE_CALL);
         mr.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
         mr.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
-        String path = context.getCacheDir() + "/-" + new Date().toString() + "-.3gp";
+        String path = context.getFilesDir() + "/" + new Date().toString() + ".3gp";
+        path= path.replaceAll("\\s", "#");
+        path = path.toLowerCase();
         add("lifted",path);
         System.out.println(path);
         mr.setOutputFile(path);
