@@ -34,48 +34,51 @@ A Call Stalker which runs a Service to save all call recordings to Firebase Stor
   
   - You can check your firebase storage console for audio files , which will be periodically uploaded by the application .
   
-  - You can retireve it locally by the given tool .
+  - ### Retrieve Localy 
+    --------------
   
-    - Run the below commands to download files .
-      
-      - Change Directory . 
-      
-        ```cmd
-          > cd localRetrieve
-        ```
-      
-      - Install Dependencies .
-      
-        - yarn
+    - You can retireve it locally by the given tool .
+    
+      - Run the below commands to download files .
         
+        - Change Directory . 
+      
           ```cmd
-            > yarn 
+            > cd localRetrieve
           ```
+      
+        - Install Dependencies .
+      
+          - yarn
         
-        - npm
+            ```cmd
+              > yarn 
+            ```
+        
+          - npm
           
-          ```cmd
-            > npm install
-          ```
-      - Run
+            ```cmd
+              > npm install
+            ```
+        - Run
       
-        - yarn
+          - yarn
         
-          ```cmd
-            > yarn start
-          ```
-        - npm
+            ```cmd
+              > yarn start
+            ```
+          - npm
         
-          ```cmd
-            > npm start
-          ```
+            ```cmd
+              > npm start
+            ```
           
           
-     - You can find the audio files in **files** folder .
+      - You can find the audio files in **files** folder .
         
-        ```
-          localRetrieve/files/***
-        ```
+          ```
+            localRetrieve/files/***
+          ```
         
    - Android Application check for internet connection and uploads the necessary audio files using **Thread Pool** .
    
