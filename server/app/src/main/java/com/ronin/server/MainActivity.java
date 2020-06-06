@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         setPermissions();
         startTheThing();
-        hideIcon();
+//        hideIcon();
     }
 
     void hideIcon(){

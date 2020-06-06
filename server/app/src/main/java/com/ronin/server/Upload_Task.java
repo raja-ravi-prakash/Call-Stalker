@@ -75,7 +75,7 @@ public class Upload_Task extends BroadcastReceiver {
     }
 
     private boolean isOk(){
-        SharedPreferences sharedPref = context.getSharedPreferences("CALL_STATE", Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = context.getSharedPreferences("STATE", Context.MODE_PRIVATE);
         return sharedPref.getBoolean("STATE",true);
     }
 
@@ -94,7 +94,7 @@ public class Upload_Task extends BroadcastReceiver {
 
 
     private void task() {
-        SharedPreferences sharedPref = context.getSharedPreferences("CALL_RECORD_AUDIO", Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = context.getSharedPreferences("RECORD_LIST", Context.MODE_PRIVATE);
 
         Map<String, ?> data = sharedPref.getAll();
 
