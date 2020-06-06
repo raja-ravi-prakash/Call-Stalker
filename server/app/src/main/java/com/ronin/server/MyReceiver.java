@@ -22,7 +22,7 @@ public class MyReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         this.context = context;
         this.intent = intent;
-        sharedPref = context.getSharedPreferences("CALL_STATE", Context.MODE_PRIVATE);
+        sharedPref = context.getSharedPreferences("STATE", Context.MODE_PRIVATE);
         geditor = sharedPref.edit();
         try {
             if (intent.getStringExtra(TelephonyManager.EXTRA_STATE).equals(TelephonyManager.EXTRA_STATE_OFFHOOK)) {
@@ -58,7 +58,7 @@ public class MyReceiver extends BroadcastReceiver {
     }
 
     void add(String type,String path){
-        SharedPreferences sharedPref = context.getSharedPreferences("CALL_RECORD_AUDIO", Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = context.getSharedPreferences("RECORD_LIST", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
 
         editor.putString(new Date().toString(),path);
